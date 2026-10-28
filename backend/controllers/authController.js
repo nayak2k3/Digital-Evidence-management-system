@@ -43,7 +43,7 @@ export const registerUser = async (req, res) => {
     // 5. Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // 6. Create user
+    
     // Publicly registered users are always viewers
     const user = await User.create({
       name: name.trim(),
